@@ -1,0 +1,30 @@
+{
+  "name": "unique-norm-fakeagency",
+  "version": "1.0.0",
+  "description": "FAKE-AGENCY",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobbydibobo/unique-norm-fakeagency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobbydibobo/unique-norm-fakeagency/issues"
+  },
+  "homepage": "https://github.com/bobbydibobo/unique-norm-fakeagency#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.11.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
