@@ -6,6 +6,11 @@ const ejsLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 
 /*---------------------
+SCHEMAS
+---------------------*/
+const User = require('./models/UserMessage');
+
+/*---------------------
 INIT APP
 ---------------------*/
 const app = express();
@@ -31,13 +36,17 @@ app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/img', express.static(__dirname + 'public/img'));
 app.use('/js', express.static(__dirname + 'public/js'));
 
+/*-------------------------------
+HTML FORM ACCESS
+-------------------------------*/
+app.use(express.urlencoded({ extended: false }));
+
 /*---------------------
 ROUTES
 ---------------------*/
 app.use('/', require('./routes/index'));
-app.use('/team', require('./routes/team'));
 app.use('/projects', require('./routes/projects'));
-app.use('/contact', require('./routes/contact'));
+app.use('/team', require('./routes/team'));
 
 /*---------------------
 PORT
