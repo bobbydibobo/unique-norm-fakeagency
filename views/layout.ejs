@@ -16,7 +16,50 @@
     <%- body %> 
     <%- include ('./partials/footer'); %>
 
-    <script src="js/lightMode"></script>
+    <script>
+        const navigation = document.querySelector('header');
+        const about = document.querySelector('.aboutUs');
+        const contact = document.querySelector('.contactUs');
+        const customers = document.querySelector('.customers');
+        const footer = document.querySelector('footer');
+        const offers = document.querySelector('.offers');
+        const text = document.querySelectorAll('p');
+        const logo = document.querySelector('.brandLogo');
+        const btn = document.querySelectorAll('button');
+
+        const modeSwitch = document.querySelector('.mode');
+
+        const modeSwitchArray = [navigation, about, contact, customers, footer, offers];
+
+        let lightMode = false;
+
+        modeSwitch.addEventListener('click', () =>{
+            modeSwitchArray.forEach(section => {
+                if(section === navigation) {
+                    section.classList.toggle('lightModeBackgroundNav');
+                } else {
+                    section.classList.toggle('lightModeBackground');
+                }
+            });
+
+            if(lightMode){
+                    for(let i = 0; i < text.length; i++){
+                    text[i].style.color = "whitesmoke";
+                    } 
+                    logo.style.color = "whitesmoke";
+
+                    lightMode = false;
+                } else {
+                    for(let i = 0; i < text.length; i++){
+                    text[i].style.color = "#2e2e2e";
+                    }
+                    logo.style.color = "#2e2e2e";
+
+                    lightMode = true;
+                }
+        });
+
+    </script>
 </body>
 
 </html>

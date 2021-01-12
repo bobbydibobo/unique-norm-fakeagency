@@ -18,6 +18,10 @@ MIXINS
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -42,7 +46,7 @@ header .brandName {
 
 header .brandName h1 {
   color: whitesmoke;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -66,6 +70,7 @@ header nav ul a {
   text-decoration: none;
   color: #6e6e6e;
   font-family: "Exo", sans-serif;
+  font-size: 1.2rem;
 }
 
 header nav ul a:hover {
@@ -96,7 +101,7 @@ header .icons svg:hover {
   background-color: #fa7d09;
   background-image: url("../img/linzBg.webp");
   background-blend-mode: multiply;
-  background-position-y: 15%;
+  background-position-y: 95%;
   border-bottom: 2px solid #ff4301;
 }
 
@@ -108,7 +113,7 @@ header .icons svg:hover {
 
 .mainLogo .upper {
   margin-top: 1%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   text-shadow: 0 0 10px #2e2e2e;
 }
@@ -143,7 +148,7 @@ header .icons svg:hover {
   padding-top: 7%;
   color: whitesmoke;
   font-family: "Nunito Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: bold;
   text-shadow: 1px 1px 10px #6e6e6e;
 }
@@ -167,15 +172,16 @@ header .icons svg:hover {
   font-family: "Exo", sans-serif;
   font-weight: bolder;
   font-style: italic;
+  font-size: 2.5rem;
   color: #fa7d09;
-  margin-top: 7%;
   border-bottom: 2px dashed #ff4301;
+  margin-top: 10%;
 }
 
 .aboutUs .philosophy p {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 200;
-  font-size: .9rem;
+  font-size: 1.3rem;
   color: whitesmoke;
   width: 60%;
   text-align: center;
@@ -205,13 +211,14 @@ header .icons svg:hover {
   font-family: "Exo", sans-serif;
   font-weight: bolder;
   font-style: italic;
+  font-size: 2.3rem;
   color: #fa7d09;
 }
 
 .offers .text p {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 200;
-  font-size: .9rem;
+  font-size: 1.1rem;
   color: whitesmoke;
 }
 
@@ -294,6 +301,7 @@ header .icons svg:hover {
   font-family: "Exo", sans-serif;
   font-weight: bolder;
   font-style: italic;
+  font-size: 2.5rem;
   color: #fa7d09;
   border-bottom: 2px dashed #ff4301;
 }
@@ -301,10 +309,10 @@ header .icons svg:hover {
 .customers .customersLogo ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 95vw;
+  width: 100vw;
   height: 65vh;
-  margin-left: 10%;
-  margin-top: 5%;
+  padding-left: 20%;
+  padding-top: 5%;
 }
 
 .customers .customersLogo ul li {
@@ -326,7 +334,7 @@ header .icons svg:hover {
   align-items: center;
   flex-direction: column;
   background-color: #2e2e2e;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 .contactUs .contactTitle {
@@ -344,12 +352,13 @@ header .icons svg:hover {
   border-bottom: 2px dashed #ff4301;
   text-align: center;
   margin-bottom: 3%;
+  font-size: 2.5rem;
 }
 
 .contactUs .contactTitle p {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 200;
-  font-size: .9rem;
+  font-size: 1.3rem;
   color: whitesmoke;
   width: 51%;
   text-align: center;
@@ -358,15 +367,15 @@ header .icons svg:hover {
 .contactUs .contactTitle p span {
   color: #fa7d09;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .contactUs form {
   margin-top: 3%;
   background-color: #fa7d09;
-  padding: 3%;
+  padding: 2%;
   border-radius: 2rem;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .contactUs form .form-group {
@@ -377,15 +386,15 @@ header .icons svg:hover {
 .contactUs form button {
   margin-top: 2%;
   padding: 1%;
-  border: 2px solid #2e2e2e;
+  border: 2px solid whitesmoke;
   border-radius: 2rem;
   font-weight: 400;
-  background-color: #2e2e2e;
-  color: #fa7d09;
+  background-color: #fa7d09;
+  color: whitesmoke;
 }
 
 .contactUs form button:hover {
-  box-shadow: 0 0 10px #2e2e2e;
+  box-shadow: 0 0 10px whitesmoke;
 }
 
 footer {
@@ -403,12 +412,128 @@ footer h4 {
   padding-top: .5%;
 }
 
-.lightMode {
+.lightModeBackground {
+  animation: fadein 1s;
   background-color: whitesmoke;
-  color: #2e2e2e;
 }
 
-.lightMode span, .lightMode h1, .lightMode h2, .lightMode h3, .lightMode h4, .lightMode h5, .lightMode h6 {
+.lightModeBackgroundNav {
+  animation: fadein 1s;
+  background-color: #dddddd;
+}
+
+.fastScroller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  right: 1.5%;
+  top: 40%;
+}
+
+.fastScroller .scrollGroup {
+  margin: 20% 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fastScroller .scrollGroup:hover {
+  border: 1px solid #6e6e6e;
+}
+
+.fastScroller .scrollGroup a .dot {
+  background: #6e6e6e;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin: 5px;
+}
+
+.fastScroller .connectLine {
+  width: 1px;
+  height: 12px;
+  background-color: #6e6e6e;
+}
+
+.thx {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2e2e2e;
+}
+
+.thx h1 {
+  font-family: "Exo", sans-serif;
+  font-weight: bolder;
+  font-style: italic;
   color: #fa7d09;
+  border-bottom: 2px dashed #ff4301;
+}
+
+.thx p {
+  color: whitesmoke;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+
+.thx svg:hover {
+  fill: #fa7d09;
+}
+
+.projectMainSite {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectMainSite h1 {
+  font-family: "Exo", sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  color: #fa7d09;
+  border-bottom: 2px dashed #ff4301;
+}
+
+.projectMainSite svg:hover {
+  fill: #fa7d09;
+}
+
+.mainTeamSite {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainTeamSite h1 {
+  font-family: "Exo", sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  color: #fa7d09;
+  border-bottom: 2px dashed #ff4301;
+}
+
+.mainTeamSite svg:hover {
+  fill: #fa7d09;
+}
+
+@keyframes fadein {
+  from {
+    opacity: .2;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */
