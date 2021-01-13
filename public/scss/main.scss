@@ -58,63 +58,71 @@ html { scroll-behavior: smooth; }
 
 //Header
 header{
-    @include flexBetween(row);
-    background-color: $backgroundDark;
-    border-bottom: 2px solid $underLineColor;
-    padding-top: 1%;
-    position: fixed;
-    top: 0;
-    width: 100%;
 
-    .active{
-        color: $specialText;
-    }
-
-    .brandName{
-        padding-left: 3%;
-        padding-bottom: .5%;
-        h1{
-            color: whitesmoke;
-            font-size: 1.5rem;
-            font-family: $nunito;
-
-            span{
-                color: $specialText;
-            }
+    .desktopMenu{
+        @include flexBetween(row);
+        background-color: $backgroundDark;
+        box-shadow: 0px 0px 10px $underLineColor;
+        padding-top: 1%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    
+        .active{
+            color: $specialText;
         }
-        
-    }
-
-    nav{
-       width: 40vw;
-        ul{
-            list-style: none;
-            @include flexAround(row);
-            a{
-                text-decoration: none;
-                color: $backgroundLightDark;
-                font-family: $exo;
-                font-size: 1.2rem;
-
-                &:hover {
+    
+        .brandName{
+            padding-left: 3%;
+            padding-bottom: .5%;
+            h1{
+                color: whitesmoke;
+                font-size: 1.5rem;
+                font-family: $nunito;
+    
+                span{
                     color: $specialText;
-                }                
+                }
+            }
+            
+        }
+    
+        nav{
+           width: 40vw;
+            ul{
+                list-style: none;
+                @include flexAround(row);
+                a{
+                    text-decoration: none;
+                    color: $backgroundLightDark;
+                    font-family: $exo;
+                    font-size: 1.2rem;
+    
+                    &:hover {
+                        color: $specialText;
+                    }                
+                }
+            }
+        }
+    
+        .icons{
+            padding-bottom: 1%;
+            margin-left:20% ;
+            width: 20%;
+            svg{
+                cursor: pointer;
+                margin-right: 10%;
+                &:hover{
+                    fill: $specialText;
+                }
             }
         }
     }
+    
+}
 
-    .icons{
-        padding-bottom: 1%;
-        margin-left:20% ;
-        width: 20%;
-        svg{
-            cursor: pointer;
-            margin-right: 10%;
-            &:hover{
-                fill: $specialText;
-            }
-        }
-    }
+.mobileMenu{
+    display: none;
 }
 
 //about
@@ -123,9 +131,10 @@ header{
     padding-top: 10%;
     background-color:$specialText;
     background-image: url('../img/linzBg.webp');
+    background-size: cover;
     background-blend-mode: multiply;
     background-position-y:95%;
-    border-bottom: 2px solid $underLineColor;
+    border-bottom: .5px solid $underLineColor;
 
     h2{
         color: whitesmoke;
@@ -202,10 +211,25 @@ header{
             width: 60%;
             text-align: center;
             margin-top: 2%;
-            margin-bottom: 7%;
+            margin-bottom: 1%;
 
             span{
                 color: $specialText;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: $backgroundDark;
+            border-radius: 2rem;
+            padding: 1%;
+            background-color: $specialText;
+            font-family: $exo;
+            font-weight: bold;
+            font-size: 1.2rem;
+
+            &:hover{
+                box-shadow: 0 0 10px $specialText;
             }
         }
     }
@@ -302,7 +326,7 @@ header{
 .customers{
     @include flexCenter(column);
     background-color: $backgroundDark;
-    padding-top: 10%;
+    padding: 10% 0;
 
     .titleCustomers{
         h2{
@@ -343,8 +367,9 @@ header{
 //contact us
 .contactUs{
     @include flexCenter(column);
-    background-color: $backgroundDark;
-    padding-top: 10%;
+    background-color: $specialText;;
+    padding-top: 5%;
+    box-shadow: 0 0 10px $specialText;
 
     .contactTitle{
         @include flexCenter(column);
@@ -353,8 +378,8 @@ header{
             font-family: $exo;
                 font-weight: bolder;
                 font-style: italic;
-                color: $specialText;
-                border-bottom: 2px dashed $underLineColor;
+                color: $backgroundDark;
+                border-bottom: 2px dashed whitesmoke;
                 text-align: center;
                 margin-bottom: 3%;
                 font-size: 2.5rem;
@@ -364,12 +389,12 @@ header{
             font-family: $nunito;
             font-weight: 200;
             font-size: 1.3rem;
-            color: whitesmoke;
+            color: $backgroundDark;
             width: 51%;
             text-align: center;
 
             span{
-                color: $specialText;
+                color: whitesmoke;
                 text-align: center;
                 font-size: 1.5rem;
             }
@@ -377,14 +402,37 @@ header{
     }
    
     form{
-        margin-top: 3%;
-        background-color: $specialText;
         padding: 2%;
-        border-radius: 2rem;
-        margin-bottom: 5%;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name email"
+        "msg msg"
+        "none submitBtn"
+        ;
+
+        #name{
+            grid-area: name;
+            padding-right: 3%;
+        }
+
+        #email{
+            grid-area: email;
+            padding-left: 3%;
+        }
+
+        #msg{
+            grid-area: msg;
+        }
+
+        #submitBtn{
+            grid-area: submitBtn;
+            display: flex;
+            justify-content: flex-end;
+        }
 
         .form-group{
-            color: $backgroundDark;
             font-family: $exo;
         }
 
@@ -422,12 +470,12 @@ footer{
 
 //modes
 .lightModeBackground{
-    animation: fadein 1s;
+    animation: fadein .5s;
     background-color: whitesmoke;
 }
 
 .lightModeBackgroundNav{
-    animation: fadein 1s;
+    animation: fadein .5s;
     background-color: rgb(221, 221, 221);
 }
 
@@ -531,6 +579,174 @@ footer{
 }
 
 @keyframes fadein {
-    from { opacity: .2; }
+    from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@media (max-width: 768px){
+    .offers{
+        @include flexCenter(column);
+
+        .photography, .graphicDesign, .webDesign{
+            @include flexCenter(column);
+
+            .text{
+                width: 80%;
+            }
+
+            .image{
+                width: 600px;
+                height: 400px;
+                margin-top: 5%;
+            }
+        }
+    }
+}
+
+@media (max-width: 690px){
+    .desktopMenu{
+        display: none;
+        .brandName{
+            display: none;
+        }
+        .icons{
+            display: none;
+        }
+        nav{
+            display: none;
+        }
+    }
+
+    .mobileMenu{
+        @include flexBetween(row);
+        padding: 5% 5%;
+        background-color: $backgroundDark;
+        border-bottom: 1px solid $underLineColor;
+
+        .burgerMenu{
+            cursor: pointer;
+        }
+
+        .brandNameMobile{
+            h1{
+                color: whitesmoke;
+
+                span{
+                    color: $specialText;
+                }
+            }
+        }
+
+        .mobileNav{
+            animation:fadein .5s ;
+            display: none;
+            position: absolute;
+            top: 0vh;
+            right: 0vw;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(37, 37, 37, .8);
+            margin: 0;
+            padding: 0;
+             ul{
+                @include flexCenter(column);
+                list-style: none;
+
+                .closeMenu{
+                    position: relative;
+                    right: 5%;
+                }
+                
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                    padding-right: 8vw;
+                    font-size: 2rem;
+                    padding-bottom: 10%;
+                    padding-top: 10%;
+                }
+             }
+        }
+    }
+
+    .mainLogo{
+        background-position-y:38% ;
+        background-position-x:30% ;
+        .logo{
+            h1{
+                font-size: 2rem;
+            }
+            img{
+                width: 50px;
+            }
+        }
+
+        .upper{
+            font-size: 1.1rem;
+        }
+        .middle{
+            font-size: 1rem;
+        }
+    }
+
+    .aboutUs{
+        .philosophy{
+            h2{
+                font-size: 1.7rem;
+                text-align: center;
+            } 
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .offers{
+        .photography, .webDesign, .graphicDesign{
+            .text{
+                h2{
+                    font-size: 1.7rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+            .image{
+                width: 280px;
+            }
+        }
+    }
+
+    .customers{
+        .titleCustomers{
+            h2{
+                text-align: center;
+                font-size: 1.7rem;
+            }
+        }
+
+        .customersLogo{
+            ul{
+                position: relative;
+                right: 10%;
+            }
+        }
+    }
+
+    .contactUs{
+        .contactTitle{
+            h2{
+                text-align: center;
+                font-size: 1.7rem;
+            }
+
+            p{
+                font-size: 1rem;
+            }
+        }
+
+        form{
+            border-radius: 0;
+        }
+    }
 }

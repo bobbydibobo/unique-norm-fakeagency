@@ -22,43 +22,43 @@ html {
   scroll-behavior: smooth;
 }
 
-header {
+header .desktopMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   background-color: #2e2e2e;
-  border-bottom: 2px solid #ff4301;
+  box-shadow: 0px 0px 10px #ff4301;
   padding-top: 1%;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-header .active {
+header .desktopMenu .active {
   color: #fa7d09;
 }
 
-header .brandName {
+header .desktopMenu .brandName {
   padding-left: 3%;
   padding-bottom: .5%;
 }
 
-header .brandName h1 {
+header .desktopMenu .brandName h1 {
   color: whitesmoke;
   font-size: 1.5rem;
   font-family: "Nunito Sans", sans-serif;
 }
 
-header .brandName h1 span {
+header .desktopMenu .brandName h1 span {
   color: #fa7d09;
 }
 
-header nav {
+header .desktopMenu nav {
   width: 40vw;
 }
 
-header nav ul {
+header .desktopMenu nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -66,30 +66,34 @@ header nav ul {
   flex-direction: row;
 }
 
-header nav ul a {
+header .desktopMenu nav ul a {
   text-decoration: none;
   color: #6e6e6e;
   font-family: "Exo", sans-serif;
   font-size: 1.2rem;
 }
 
-header nav ul a:hover {
+header .desktopMenu nav ul a:hover {
   color: #fa7d09;
 }
 
-header .icons {
+header .desktopMenu .icons {
   padding-bottom: 1%;
   margin-left: 20%;
   width: 20%;
 }
 
-header .icons svg {
+header .desktopMenu .icons svg {
   cursor: pointer;
   margin-right: 10%;
 }
 
-header .icons svg:hover {
+header .desktopMenu .icons svg:hover {
   fill: #fa7d09;
+}
+
+.mobileMenu {
+  display: none;
 }
 
 .mainLogo {
@@ -100,9 +104,10 @@ header .icons svg:hover {
   padding-top: 10%;
   background-color: #fa7d09;
   background-image: url("../img/linzBg.webp");
+  background-size: cover;
   background-blend-mode: multiply;
   background-position-y: 95%;
-  border-bottom: 2px solid #ff4301;
+  border-bottom: 0.5px solid #ff4301;
 }
 
 .mainLogo h2 {
@@ -186,11 +191,26 @@ header .icons svg:hover {
   width: 60%;
   text-align: center;
   margin-top: 2%;
-  margin-bottom: 7%;
+  margin-bottom: 1%;
 }
 
 .aboutUs .philosophy p span {
   color: #fa7d09;
+}
+
+.aboutUs .philosophy a {
+  text-decoration: none;
+  color: #2e2e2e;
+  border-radius: 2rem;
+  padding: 1%;
+  background-color: #fa7d09;
+  font-family: "Exo", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.aboutUs .philosophy a:hover {
+  box-shadow: 0 0 10px #fa7d09;
 }
 
 .offers {
@@ -294,7 +314,7 @@ header .icons svg:hover {
   align-items: center;
   flex-direction: column;
   background-color: #2e2e2e;
-  padding-top: 10%;
+  padding: 10% 0;
 }
 
 .customers .titleCustomers h2 {
@@ -333,8 +353,9 @@ header .icons svg:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #2e2e2e;
-  padding-top: 10%;
+  background-color: #fa7d09;
+  padding-top: 5%;
+  box-shadow: 0 0 10px #fa7d09;
 }
 
 .contactUs .contactTitle {
@@ -348,8 +369,8 @@ header .icons svg:hover {
   font-family: "Exo", sans-serif;
   font-weight: bolder;
   font-style: italic;
-  color: #fa7d09;
-  border-bottom: 2px dashed #ff4301;
+  color: #2e2e2e;
+  border-bottom: 2px dashed whitesmoke;
   text-align: center;
   margin-bottom: 3%;
   font-size: 2.5rem;
@@ -359,27 +380,46 @@ header .icons svg:hover {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 200;
   font-size: 1.3rem;
-  color: whitesmoke;
+  color: #2e2e2e;
   width: 51%;
   text-align: center;
 }
 
 .contactUs .contactTitle p span {
-  color: #fa7d09;
+  color: whitesmoke;
   text-align: center;
   font-size: 1.5rem;
 }
 
 .contactUs form {
-  margin-top: 3%;
-  background-color: #fa7d09;
   padding: 2%;
-  border-radius: 2rem;
-  margin-bottom: 5%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "name email" "msg msg" "none submitBtn";
+}
+
+.contactUs form #name {
+  grid-area: name;
+  padding-right: 3%;
+}
+
+.contactUs form #email {
+  grid-area: email;
+  padding-left: 3%;
+}
+
+.contactUs form #msg {
+  grid-area: msg;
+}
+
+.contactUs form #submitBtn {
+  grid-area: submitBtn;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .contactUs form .form-group {
-  color: #2e2e2e;
   font-family: "Exo", sans-serif;
 }
 
@@ -413,12 +453,12 @@ footer h4 {
 }
 
 .lightModeBackground {
-  animation: fadein 1s;
+  animation: fadein .5s;
   background-color: whitesmoke;
 }
 
 .lightModeBackgroundNav {
-  animation: fadein 1s;
+  animation: fadein .5s;
   background-color: #dddddd;
 }
 
@@ -530,10 +570,147 @@ footer h4 {
 
 @keyframes fadein {
   from {
-    opacity: .2;
+    opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .offers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .offers .photography, .offers .graphicDesign, .offers .webDesign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .offers .photography .text, .offers .graphicDesign .text, .offers .webDesign .text {
+    width: 80%;
+  }
+  .offers .photography .image, .offers .graphicDesign .image, .offers .webDesign .image {
+    width: 600px;
+    height: 400px;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 690px) {
+  .desktopMenu {
+    display: none;
+  }
+  .desktopMenu .brandName {
+    display: none;
+  }
+  .desktopMenu .icons {
+    display: none;
+  }
+  .desktopMenu nav {
+    display: none;
+  }
+  .mobileMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 5% 5%;
+    background-color: #2e2e2e;
+    border-bottom: 1px solid #ff4301;
+  }
+  .mobileMenu .burgerMenu {
+    cursor: pointer;
+  }
+  .mobileMenu .brandNameMobile h1 {
+    color: whitesmoke;
+  }
+  .mobileMenu .brandNameMobile h1 span {
+    color: #fa7d09;
+  }
+  .mobileMenu .mobileNav {
+    animation: fadein .5s;
+    display: none;
+    position: absolute;
+    top: 0vh;
+    right: 0vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(37, 37, 37, 0.8);
+    margin: 0;
+    padding: 0;
+  }
+  .mobileMenu .mobileNav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+  }
+  .mobileMenu .mobileNav ul .closeMenu {
+    position: relative;
+    right: 5%;
+  }
+  .mobileMenu .mobileNav ul a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding-right: 8vw;
+    font-size: 2rem;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+  .mainLogo {
+    background-position-y: 38%;
+    background-position-x: 30%;
+  }
+  .mainLogo .logo h1 {
+    font-size: 2rem;
+  }
+  .mainLogo .logo img {
+    width: 50px;
+  }
+  .mainLogo .upper {
+    font-size: 1.1rem;
+  }
+  .mainLogo .middle {
+    font-size: 1rem;
+  }
+  .aboutUs .philosophy h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .aboutUs .philosophy p {
+    font-size: 1rem;
+  }
+  .offers .photography .text h2, .offers .webDesign .text h2, .offers .graphicDesign .text h2 {
+    font-size: 1.7rem;
+  }
+  .offers .photography .text p, .offers .webDesign .text p, .offers .graphicDesign .text p {
+    font-size: 1rem;
+  }
+  .offers .photography .image, .offers .webDesign .image, .offers .graphicDesign .image {
+    width: 280px;
+  }
+  .customers .titleCustomers h2 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .customers .customersLogo ul {
+    position: relative;
+    right: 10%;
+  }
+  .contactUs .contactTitle h2 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .contactUs .contactTitle p {
+    font-size: 1rem;
+  }
+  .contactUs form {
+    border-radius: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
