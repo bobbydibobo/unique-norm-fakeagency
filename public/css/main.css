@@ -766,6 +766,44 @@ footer h4 {
   flex-direction: column;
 }
 
+.projectMainSite .projectsHeader {
+  padding-top: 10%;
+  padding-bottom: 2%;
+}
+
+.projectMainSite .projectsHeader .projectText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.projectMainSite .projectsHeader .projectText h2 {
+  font-family: "Exo", sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #fa7d09;
+  border-bottom: 2px dashed #ff4301;
+  margin-top: 10%;
+}
+
+.projectMainSite .projectsHeader .projectText p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  width: 60%;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+.projectMainSite .projectsHeader .projectText p span {
+  color: #fa7d09;
+}
+
 .projectMainSite .pOne {
   display: flex;
   justify-content: space-between;
@@ -884,8 +922,6 @@ footer h4 {
 }
 
 .mainTeamSite {
-  height: 100vh;
-  width: 100vw;
   background-color: #2e2e2e;
   display: flex;
   justify-content: center;
@@ -893,16 +929,62 @@ footer h4 {
   flex-direction: column;
 }
 
-.mainTeamSite h1 {
+.mainTeamSite .teamHeader .projectText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mainTeamSite .teamHeader .projectText h2 {
   font-family: "Exo", sans-serif;
   font-weight: bolder;
   font-style: italic;
+  font-size: 2.5rem;
   color: #fa7d09;
   border-bottom: 2px dashed #ff4301;
+  margin-top: 10%;
 }
 
-.mainTeamSite svg:hover {
-  fill: #fa7d09;
+.mainTeamSite .teamHeader .projectText p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  width: 60%;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+.mainTeamSite .teamHeader .projectText p span {
+  color: #fa7d09;
+}
+
+.mainTeamSite .membercontainer {
+  height: 60vh;
+  width: 100vw;
+  margin-top: 10%;
+  box-shadow: 0 0 10px #fa7d09;
+}
+
+.mainTeamSite .membercontainer .teamMember {
+  height: 100%;
+  background-color: #fa7d09;
+  background-image: url("../img/randomWoman.webp");
+  background-size: cover;
+  background-position-x: 50%;
+  background-blend-mode: multiply;
+  box-shadow: 0 0 10 #fa7d09;
+}
+
+.mainTeamSite .membercontainer .teamMember h2 {
+  padding: 2% 2%;
+  width: 40%;
+  font-family: "Exo", sans-serif;
+  color: #2e2e2e;
+  font-size: 1rem;
 }
 
 @keyframes fadein {
@@ -934,6 +1016,13 @@ footer h4 {
     width: 600px;
     height: 400px;
     margin-top: 5%;
+  }
+  .projectMainSite .projectsHeader .projectText h2 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .projectMainSite .projectsHeader .projectText p {
+    font-size: 1.2rem;
   }
   .projectMainSite .pOne, .projectMainSite .pTwo {
     display: flex;
@@ -1063,6 +1152,10 @@ footer h4 {
   }
   .contactUs form {
     border-radius: 0;
+  }
+  .projects .projectTitle h2 {
+    text-align: center;
+    font-size: 1.7rem;
   }
   .projects .projectFlex {
     display: flex;

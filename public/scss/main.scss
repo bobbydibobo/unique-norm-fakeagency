@@ -774,6 +774,40 @@ footer{
     background-color: $backgroundDark;
     @include flexCenter(column);
 
+    .projectsHeader{
+        padding-top: 10%;
+        padding-bottom: 2%;
+        .projectText{
+            @include flexCenter(column);
+            text-align: center;
+
+            h2{
+                font-family: $exo;
+                font-weight: bolder;
+                font-style: italic;
+                font-size: 2.5rem;
+                color: $specialText;
+                border-bottom: 2px dashed $underLineColor;
+                margin-top: 10%;
+            }
+    
+            p{
+                font-family: $nunito;
+                font-weight: 200;
+                font-size: 1.3rem;
+                color: whitesmoke;
+                width: 60%;
+                text-align: center;
+                margin-top: 2%;
+                margin-bottom: 1%;
+    
+                span{
+                    color: $specialText;
+                }
+            }
+        }
+    }
+
     .pOne{
         @include flexBetween(row);
         width: 100%;
@@ -879,22 +913,64 @@ footer{
 
 //team
 .mainTeamSite{
-    height: 100vh;
-    width: 100vw;
     background-color: $backgroundDark;
     @include flexCenter(column);
 
-    h1{
-        font-family: $exo;
-        font-weight: bolder;
-        font-style: italic;
-        color: $specialText;
-        border-bottom: 2px dashed $underLineColor;
-    }
+    .teamHeader{
+        .projectText{
+            @include flexCenter(column);
+            text-align: center;
 
-    svg:hover{
-        fill: $specialText;
-    }
+            h2{
+                font-family: $exo;
+                font-weight: bolder;
+                font-style: italic;
+                font-size: 2.5rem;
+                color: $specialText;
+                border-bottom: 2px dashed $underLineColor;
+                margin-top: 10%;
+            }
+    
+            p{
+                font-family: $nunito;
+                font-weight: 200;
+                font-size: 1.3rem;
+                color: whitesmoke;
+                width: 60%;
+                text-align: center;
+                margin-top: 2%;
+                margin-bottom: 1%;
+    
+                span{
+                    color: $specialText;
+                }
+            }
+        }
+    }  
+    .membercontainer{
+        height: 60vh;
+        width: 100vw;
+        margin-top: 10%;
+        box-shadow: 0 0 10px $specialText;
+        .teamMember{
+            height: 100%;
+            background-color: $specialText;
+            background-image: url('../img/randomWoman.webp');
+            background-size: cover;
+            background-position-x:50% ;
+            background-blend-mode: multiply;
+            box-shadow: 0 0 10 $specialText;
+
+            h2{
+                padding: 2% 2%;
+                width: 40%;
+                font-family: $exo;
+                color: $backgroundDark;
+                font-size: 1rem;
+            }
+        }
+    } 
+    
 }
 
 @keyframes fadein {
@@ -921,6 +997,18 @@ footer{
         }
     }
     .projectMainSite{
+
+        .projectsHeader{
+            .projectText{
+                h2{
+                    text-align: center;
+                font-size: 1.7rem;
+                }
+                p{
+                   font-size:  1.2rem;
+                }
+            }
+        }
         .pOne, .pTwo{
             @include flexCenter(column);
     
@@ -1090,6 +1178,14 @@ footer{
     }
 
     .projects{
+
+        .projectTitle{
+            h2{
+                text-align: center;
+                font-size: 1.7rem; 
+            }
+        }
+        
         .projectFlex{
             @include flexCenter(column);
         }
