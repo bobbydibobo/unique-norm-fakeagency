@@ -308,6 +308,123 @@ header .desktopMenu .icons svg:hover {
   background-position-y: 15%;
 }
 
+.projects {
+  background-color: #2e2e2e;
+  padding-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects .projectTitle h2 {
+  font-family: "Exo", sans-serif;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 2.3rem;
+  color: #fa7d09;
+  text-align: center;
+  border-bottom: 2px dashed #ff4301;
+  margin-bottom: 10%;
+}
+
+.projects .projectGrid {
+  width: 85%;
+  height: 80vh;
+  display: grid;
+  padding: 1% 1%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas: "a a b b b c e e e" "f f g g g g e e e" "f f g g g g e e e";
+}
+
+.projects .projectGrid .project1 {
+  grid-area: a;
+  cursor: pointer;
+  background-image: url("../img/projectOne.webp");
+  background-size: cover;
+  filter: grayscale(100%);
+  box-shadow: 0 0 5px #fa7d09;
+}
+
+.projects .projectGrid .project1:hover {
+  filter: none;
+}
+
+.projects .projectGrid .project2 {
+  grid-area: b;
+  cursor: pointer;
+  background-color: #fa7d09;
+  background-image: url("../img/projectThree.webp");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-y: 70%;
+  box-shadow: 0 0 5px whitesmoke;
+}
+
+.projects .projectGrid .project2:hover {
+  background-color: white;
+}
+
+.projects .projectGrid .project3 {
+  grid-area: c;
+  cursor: pointer;
+  background-image: url("../img/projectTwo.webp");
+  background-size: cover;
+  background-position-x: 50%;
+  filter: grayscale(100%);
+  box-shadow: 0 0 5px #fa7d09;
+}
+
+.projects .projectGrid .project3:hover {
+  filter: none;
+}
+
+.projects .projectGrid .project5 {
+  grid-area: e;
+  cursor: pointer;
+  background-color: #fa7d09;
+  background-image: url("../img/projectFour.webp");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-y: 70%;
+  box-shadow: 0 0 5px whitesmoke;
+}
+
+.projects .projectGrid .project5:hover {
+  background-color: white;
+}
+
+.projects .projectGrid .project6 {
+  grid-area: f;
+  cursor: pointer;
+  background-color: #fa7d09;
+  background-image: url("../img/projectFive.webp");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-y: 70%;
+  box-shadow: 0 0 5px whitesmoke;
+}
+
+.projects .projectGrid .project6:hover {
+  background-color: white;
+}
+
+.projects .projectGrid .project7 {
+  grid-area: g;
+  cursor: pointer;
+  background-image: url("../img/projectSix.webp");
+  background-size: cover;
+  background-position-x: 50%;
+  filter: grayscale(100%);
+  box-shadow: 0 0 5px #fa7d09;
+}
+
+.projects .projectGrid .project7:hover {
+  filter: none;
+}
+
 .customers {
   display: flex;
   justify-content: center;
@@ -346,6 +463,18 @@ header .desktopMenu .icons svg:hover {
 
 .customers .customersLogo ul li img:hover {
   box-shadow: 0 0 100px #fa7d09;
+}
+
+.customers p {
+  text-align: center;
+  color: whitesmoke;
+  font-family: "Exo", sans-serif;
+  font-size: 1.2rem;
+}
+
+.customers p span {
+  color: #fa7d09;
+  font-size: 1.5rem;
 }
 
 .contactUs {

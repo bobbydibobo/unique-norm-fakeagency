@@ -322,6 +322,123 @@ header{
     }
 }
 
+//projects
+.projects{
+    background-color: $backgroundDark;
+    padding-bottom: 10%;
+    @include flexCenter(column);
+    
+    .projectTitle{
+        h2{
+            font-family: $exo;
+            font-weight: bolder;
+            font-style: italic;
+            font-size: 2.3rem;
+            color: $specialText;
+            text-align: center;
+            border-bottom: 2px dashed $underLineColor;
+            margin-bottom: 10%;
+        }
+    }
+
+    .projectGrid{
+        width: 85%;
+        height: 80vh;
+        display: grid;
+        padding: 1% 1%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "a a b b b c e e e"
+        "f f g g g g e e e"
+        "f f g g g g e e e";
+
+        .project1{
+            grid-area: a;
+            cursor: pointer;
+            background-image: url('../img/projectOne.webp');
+            background-size: cover;
+            filter: grayscale(100%);
+            box-shadow: 0 0 5px $specialText;
+
+            &:hover{
+                filter: none;
+            }
+        }
+        .project2{
+            grid-area: b; 
+            cursor: pointer;
+            background-color: $specialText;
+            background-image: url('../img/projectThree.webp');
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position-y: 70%;
+            box-shadow: 0 0 5px whitesmoke;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+        .project3{
+            grid-area: c; 
+            cursor: pointer;
+            background-image: url('../img/projectTwo.webp');
+            background-size: cover;
+            background-position-x: 50%;
+            filter: grayscale(100%);
+            box-shadow: 0 0 5px $specialText;
+
+            &:hover{
+                filter: none;
+            }
+        }
+
+        .project5{
+            grid-area: e;  
+            cursor: pointer;
+            background-color: $specialText;
+            background-image: url('../img/projectFour.webp');
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position-y: 70%;
+            box-shadow: 0 0 5px whitesmoke;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+        .project6{
+            grid-area: f; 
+            cursor: pointer;
+            background-color: $specialText;
+            background-image: url('../img/projectFive.webp');
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position-y: 70%;
+            box-shadow: 0 0 5px whitesmoke;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+        .project7{
+            grid-area: g; 
+            cursor: pointer;
+            background-image: url('../img/projectSix.webp');
+            background-size: cover;
+            background-position-x: 50%;
+            filter: grayscale(100%);
+            box-shadow: 0 0 5px $specialText;
+
+            &:hover{
+                filter: none;
+            }
+        }
+
+    }
+}
+
 //customers
 .customers{
     @include flexCenter(column);
@@ -360,6 +477,18 @@ header{
                     }
                 }
             }
+        }
+    }
+
+    p{
+        text-align: center;
+        color: whitesmoke;
+        font-family: $exo;
+        font-size: 1.2rem;
+
+        span{
+            color: $specialText;
+            font-size: 1.5rem;
         }
     }
 }
