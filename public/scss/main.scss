@@ -437,6 +437,108 @@ header{
         }
 
     }
+
+    .projectFlex{
+        display: none;
+        height: 200vh;
+        width: 80vw;
+        padding-bottom: 10%;
+        
+
+        .project1{
+            height: 20%;
+            width: 70%;
+            cursor: pointer;
+            background-image: url('../img/projectOne.webp');
+            background-size: cover;
+            filter: grayscale(100%);
+            box-shadow: 0 0 5px $specialText;
+            margin-bottom: 5%;
+
+            &:hover{
+                filter: none;
+            }
+        }
+        .project2{
+            height: 20%;
+            width: 70%;
+            cursor: pointer;
+            background-color: $specialText;
+            background-image: url('../img/projectThree.webp');
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position-y: 70%;
+            box-shadow: 0 0 5px whitesmoke;
+            margin-bottom: 5%;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+        .project3{
+            height: 20%;
+            width: 70%; 
+            cursor: pointer;
+            background-image: url('../img/projectTwo.webp');
+            background-size: cover;
+            background-position-x: 50%;
+            filter: grayscale(100%);
+            box-shadow: 0 0 5px $specialText;
+            margin-bottom: 5%;
+
+            &:hover{
+                filter: none;
+            }
+        }
+
+        .project5{
+            height: 20%;
+            width: 70%;
+            cursor: pointer;
+            background-color: $specialText;
+            background-image: url('../img/projectFour.webp');
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position-y: 70%;
+            box-shadow: 0 0 5px whitesmoke;
+            margin-bottom: 5%;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+        .project6{
+            height: 20%;
+            width: 70%;
+            cursor: pointer;
+            background-color: $specialText;
+            background-image: url('../img/projectFive.webp');
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position-y: 70%;
+            box-shadow: 0 0 5px whitesmoke;
+            margin-bottom: 5%;
+
+            &:hover{
+                background-color: white;
+            }
+        }
+        .project7{
+            height: 20%;
+            width: 70%; 
+            cursor: pointer;
+            background-image: url('../img/projectSix.webp');
+            background-size: cover;
+            background-position-x: 50%;
+            filter: grayscale(100%);
+            box-shadow: 0 0 5px $specialText;
+            margin-bottom: 5%;
+
+            &:hover{
+                filter: none;
+            }
+        }
+    }
 }
 
 //customers
@@ -669,21 +771,109 @@ footer{
 
 //projects
 .projectMainSite{
-    height: 100vh;
-    width: 100vw;
     background-color: $backgroundDark;
     @include flexCenter(column);
 
-    h1{
-        font-family: $exo;
-        font-weight: bolder;
-        font-style: italic;
-        color: $specialText;
-        border-bottom: 2px dashed $underLineColor;
+    .pOne{
+        @include flexBetween(row);
+        width: 100%;
+        padding: 15% 5%;
+
+        .text{
+            width: 40vw;
+            h2{
+                font-family: $exo;
+                font-weight: bolder;
+                color: $specialText;
+                margin-bottom: 3%;
+                font-size: 2.5rem; 
+                 
+            }
+            h3{
+                font-family: $exo;
+                font-style: italic;
+                color: $backgroundLightDark;
+                margin-bottom: 3%;
+                font-size: 1.5rem;  
+            }
+            p{
+                font-family: $nunito;
+                font-weight: 200;
+                font-size: 1.1rem;
+                color: whitesmoke; 
+            }
+        }
+
+        .img{
+            height: 50vh;
+            width: 30vw;
+            background-color: #fa7d09;
+            background-size: cover;
+            box-shadow: 0 0 10px $underLineColor;
+        }
     }
 
-    svg:hover{
-        fill: $specialText;
+    .pTwo{
+        @include flexBetween(row-reverse);
+        width: 100%;
+        padding: 15% 5%;
+
+        .text{
+            width: 40vw;
+            h2{
+                font-family: $exo;
+                font-weight: bolder;
+                color: $specialText;
+                margin-bottom: 3%;
+                font-size: 2.5rem; 
+                 
+            }
+            h3{
+                font-family: $exo;
+                font-style: italic;
+                color: $backgroundLightDark;
+                margin-bottom: 3%;
+                font-size: 1.5rem;  
+            }
+            p{
+                font-family: $nunito;
+                font-weight: 200;
+                font-size: 1.1rem;
+                color: whitesmoke; 
+            }
+        }
+
+        .img{
+            height: 50vh;
+            width: 30vw;
+            background-color: #fa7d09;
+            background-size: cover;
+            box-shadow: 0 0 10px $underLineColor;
+        }
+    }
+
+    #p1img{
+        background-image: url('../img/projectOne.webp');
+        background-position-x:15% ;
+    }
+    #p2img{
+        background-image: url('../img/projectTwo.webp');
+        background-position-x:50% ;
+    }
+    #p3img{
+        background-image: url('../img/projectThree.webp');
+        background-position-x:70% ;
+    }
+    #p4img{
+        background-image: url('../img/projectFour.webp');
+    }
+    #p5img{
+        background-image: url('../img/projectFive.webp');
+        background-position-y:70% ;
+    }
+    #p6img{
+        background-image: url('../img/projectSix.webp');
+        background-position-x:70% ;
     }
 }
 
@@ -730,7 +920,27 @@ footer{
             }
         }
     }
+    .projectMainSite{
+        .pOne, .pTwo{
+            @include flexCenter(column);
+    
+            .text{
+                width: 90%;
+            }
+    
+            .img{
+                width: 90%;
+            }
+    
+            #p3img{
+                background-size: cover;
+            }
+        }
+    }
+
 }
+
+
 
 @media (max-width: 690px){
     .desktopMenu{
@@ -878,4 +1088,14 @@ footer{
             border-radius: 0;
         }
     }
+
+    .projects{
+        .projectFlex{
+            @include flexCenter(column);
+        }
+        .projectGrid{
+            display: none;
+        }
+    }
+    
 }

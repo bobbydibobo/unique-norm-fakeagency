@@ -425,6 +425,111 @@ header .desktopMenu .icons svg:hover {
   filter: none;
 }
 
+.projects .projectFlex {
+  display: none;
+  height: 200vh;
+  width: 80vw;
+  padding-bottom: 10%;
+}
+
+.projects .projectFlex .project1 {
+  height: 20%;
+  width: 70%;
+  cursor: pointer;
+  background-image: url("../img/projectOne.webp");
+  background-size: cover;
+  filter: grayscale(100%);
+  box-shadow: 0 0 5px #fa7d09;
+  margin-bottom: 5%;
+}
+
+.projects .projectFlex .project1:hover {
+  filter: none;
+}
+
+.projects .projectFlex .project2 {
+  height: 20%;
+  width: 70%;
+  cursor: pointer;
+  background-color: #fa7d09;
+  background-image: url("../img/projectThree.webp");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-y: 70%;
+  box-shadow: 0 0 5px whitesmoke;
+  margin-bottom: 5%;
+}
+
+.projects .projectFlex .project2:hover {
+  background-color: white;
+}
+
+.projects .projectFlex .project3 {
+  height: 20%;
+  width: 70%;
+  cursor: pointer;
+  background-image: url("../img/projectTwo.webp");
+  background-size: cover;
+  background-position-x: 50%;
+  filter: grayscale(100%);
+  box-shadow: 0 0 5px #fa7d09;
+  margin-bottom: 5%;
+}
+
+.projects .projectFlex .project3:hover {
+  filter: none;
+}
+
+.projects .projectFlex .project5 {
+  height: 20%;
+  width: 70%;
+  cursor: pointer;
+  background-color: #fa7d09;
+  background-image: url("../img/projectFour.webp");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-y: 70%;
+  box-shadow: 0 0 5px whitesmoke;
+  margin-bottom: 5%;
+}
+
+.projects .projectFlex .project5:hover {
+  background-color: white;
+}
+
+.projects .projectFlex .project6 {
+  height: 20%;
+  width: 70%;
+  cursor: pointer;
+  background-color: #fa7d09;
+  background-image: url("../img/projectFive.webp");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-y: 70%;
+  box-shadow: 0 0 5px whitesmoke;
+  margin-bottom: 5%;
+}
+
+.projects .projectFlex .project6:hover {
+  background-color: white;
+}
+
+.projects .projectFlex .project7 {
+  height: 20%;
+  width: 70%;
+  cursor: pointer;
+  background-image: url("../img/projectSix.webp");
+  background-size: cover;
+  background-position-x: 50%;
+  filter: grayscale(100%);
+  box-shadow: 0 0 5px #fa7d09;
+  margin-bottom: 5%;
+}
+
+.projects .projectFlex .project7:hover {
+  filter: none;
+}
+
 .customers {
   display: flex;
   justify-content: center;
@@ -654,8 +759,6 @@ footer h4 {
 }
 
 .projectMainSite {
-  height: 100vh;
-  width: 100vw;
   background-color: #2e2e2e;
   display: flex;
   justify-content: center;
@@ -663,16 +766,121 @@ footer h4 {
   flex-direction: column;
 }
 
-.projectMainSite h1 {
-  font-family: "Exo", sans-serif;
-  font-weight: bolder;
-  font-style: italic;
-  color: #fa7d09;
-  border-bottom: 2px dashed #ff4301;
+.projectMainSite .pOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 15% 5%;
 }
 
-.projectMainSite svg:hover {
-  fill: #fa7d09;
+.projectMainSite .pOne .text {
+  width: 40vw;
+}
+
+.projectMainSite .pOne .text h2 {
+  font-family: "Exo", sans-serif;
+  font-weight: bolder;
+  color: #fa7d09;
+  margin-bottom: 3%;
+  font-size: 2.5rem;
+}
+
+.projectMainSite .pOne .text h3 {
+  font-family: "Exo", sans-serif;
+  font-style: italic;
+  color: #6e6e6e;
+  margin-bottom: 3%;
+  font-size: 1.5rem;
+}
+
+.projectMainSite .pOne .text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  color: whitesmoke;
+}
+
+.projectMainSite .pOne .img {
+  height: 50vh;
+  width: 30vw;
+  background-color: #fa7d09;
+  background-size: cover;
+  box-shadow: 0 0 10px #ff4301;
+}
+
+.projectMainSite .pTwo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 15% 5%;
+}
+
+.projectMainSite .pTwo .text {
+  width: 40vw;
+}
+
+.projectMainSite .pTwo .text h2 {
+  font-family: "Exo", sans-serif;
+  font-weight: bolder;
+  color: #fa7d09;
+  margin-bottom: 3%;
+  font-size: 2.5rem;
+}
+
+.projectMainSite .pTwo .text h3 {
+  font-family: "Exo", sans-serif;
+  font-style: italic;
+  color: #6e6e6e;
+  margin-bottom: 3%;
+  font-size: 1.5rem;
+}
+
+.projectMainSite .pTwo .text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  color: whitesmoke;
+}
+
+.projectMainSite .pTwo .img {
+  height: 50vh;
+  width: 30vw;
+  background-color: #fa7d09;
+  background-size: cover;
+  box-shadow: 0 0 10px #ff4301;
+}
+
+.projectMainSite #p1img {
+  background-image: url("../img/projectOne.webp");
+  background-position-x: 15%;
+}
+
+.projectMainSite #p2img {
+  background-image: url("../img/projectTwo.webp");
+  background-position-x: 50%;
+}
+
+.projectMainSite #p3img {
+  background-image: url("../img/projectThree.webp");
+  background-position-x: 70%;
+}
+
+.projectMainSite #p4img {
+  background-image: url("../img/projectFour.webp");
+}
+
+.projectMainSite #p5img {
+  background-image: url("../img/projectFive.webp");
+  background-position-y: 70%;
+}
+
+.projectMainSite #p6img {
+  background-image: url("../img/projectSix.webp");
+  background-position-x: 70%;
 }
 
 .mainTeamSite {
@@ -726,6 +934,21 @@ footer h4 {
     width: 600px;
     height: 400px;
     margin-top: 5%;
+  }
+  .projectMainSite .pOne, .projectMainSite .pTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .projectMainSite .pOne .text, .projectMainSite .pTwo .text {
+    width: 90%;
+  }
+  .projectMainSite .pOne .img, .projectMainSite .pTwo .img {
+    width: 90%;
+  }
+  .projectMainSite .pOne #p3img, .projectMainSite .pTwo #p3img {
+    background-size: cover;
   }
 }
 
@@ -840,6 +1063,15 @@ footer h4 {
   }
   .contactUs form {
     border-radius: 0;
+  }
+  .projects .projectFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .projects .projectGrid {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
