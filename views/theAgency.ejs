@@ -56,3 +56,64 @@
 <%- include ('./partials/customers'); %>
 
 <%- include ('./partials/contactUs'); %>
+
+<%- include ('./partials/footer'); %>
+
+<script>
+
+    //LIGHTMODE
+    const navigation = document.querySelector('.desktopMenu');
+    const about = document.querySelector('.aboutUs');
+    const customers = document.querySelector('.customers');
+    const footer = document.querySelector('footer');
+    const offers = document.querySelector('.offers');
+    const text = document.querySelectorAll('p');
+    const logo = document.querySelector('.brandLogo');
+    const btn = document.querySelectorAll('button');
+
+    const modeSwitch = document.querySelector('.mode');
+
+    const modeSwitchArray = [navigation, about, customers, footer, offers];
+
+    let lightMode = false;
+
+    modeSwitch.addEventListener('click', () =>{
+        modeSwitchArray.forEach(section => {
+            if(section === navigation) {
+                lightMode ? navigation.style.backgroundColor = "#2e2e2e" : navigation.style.backgroundColor = "#dfdfdf"; 
+            } else {
+                section.classList.toggle('lightModeBackground');
+            }
+        });
+
+        if(lightMode){
+                for(let i = 0; i < text.length; i++){
+                text[i].style.color = "whitesmoke";
+                } 
+                logo.style.color = "whitesmoke";
+
+                lightMode = false;
+            } else {
+                for(let i = 0; i < text.length; i++){
+                text[i].style.color = "#2e2e2e";
+                }
+                logo.style.color = "#2e2e2e";
+
+                lightMode = true;
+            }
+    });
+
+    //BURGER MENU
+    const openMenuBtn = document.querySelector('.openMenu');
+    const closeMenuBtn = document.querySelector('.closeMenu');
+    const mobileNav = document.querySelector('.mobileNav');
+
+    openMenuBtn.addEventListener('click', () =>{
+        mobileNav.style.display = "block";
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileNav.style.display = "none";
+    });
+
+</script>

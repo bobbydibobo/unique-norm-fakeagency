@@ -963,20 +963,119 @@ footer h4 {
 }
 
 .mainTeamSite .membercontainer {
-  height: 60vh;
+  height: 300vh;
   width: 100vw;
-  margin-top: 10%;
-  box-shadow: 0 0 10px #fa7d09;
+  margin-top: 5%;
+}
+
+.mainTeamSite .membercontainer #bobo1 {
+  background-image: url("../img/Bobo1.jpg");
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+.mainTeamSite .membercontainer #bobo1 .textContent {
+  width: 30%;
+}
+
+.mainTeamSite .membercontainer #bobo1 .textContent h2 {
+  font-size: 4rem;
+  color: #2e2e2e;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.mainTeamSite .membercontainer #bobo1 .textContent p {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.mainTeamSite .membercontainer #bobo2 {
+  background-image: url("../img/Bobo2.jpg");
+  display: flex;
+  flex-direction: row;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.mainTeamSite .membercontainer #bobo2 .textContent {
+  width: 30%;
+}
+
+.mainTeamSite .membercontainer #bobo2 .textContent h2 {
+  font-size: 4rem;
+  color: #2e2e2e;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.mainTeamSite .membercontainer #bobo2 .textContent p {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.mainTeamSite .membercontainer #bobo3 {
+  background-image: url("../img/Bobo3.jpg");
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+.mainTeamSite .membercontainer #bobo3 .textContent {
+  width: 30%;
+}
+
+.mainTeamSite .membercontainer #bobo3 .textContent h2 {
+  font-size: 4rem;
+  color: #2e2e2e;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.mainTeamSite .membercontainer #bobo3 .textContent p {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.mainTeamSite .membercontainer #bobo4 {
+  background-image: url("../img/Bobo4.jpg");
+  display: flex;
+  flex-direction: row;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.mainTeamSite .membercontainer #bobo4 .textContent {
+  width: 30%;
+}
+
+.mainTeamSite .membercontainer #bobo4 .textContent h2 {
+  font-size: 4rem;
+  color: #2e2e2e;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.mainTeamSite .membercontainer #bobo4 .textContent p {
+  font-size: 1.5rem;
+  color: whitesmoke;
 }
 
 .mainTeamSite .membercontainer .teamMember {
-  height: 100%;
+  height: 17.5%;
   background-color: #fa7d09;
-  background-image: url("../img/randomWoman.webp");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-x: 50%;
   background-blend-mode: multiply;
   box-shadow: 0 0 10 #fa7d09;
+  position: relative;
+  left: 0%;
+  box-shadow: 0 0 10px #fa7d09;
+  margin-bottom: 10%;
 }
 
 .mainTeamSite .membercontainer .teamMember h2 {
@@ -1038,6 +1137,24 @@ footer h4 {
   }
   .projectMainSite .pOne #p3img, .projectMainSite .pTwo #p3img {
     background-size: cover;
+  }
+  .mainTeamSite .membercontainer #bobo1, .mainTeamSite .membercontainer #bobo3 {
+    background-position-x: 5%;
+  }
+  .mainTeamSite .membercontainer #bobo1 .textContent h2, .mainTeamSite .membercontainer #bobo3 .textContent h2 {
+    font-size: 1.7rem;
+  }
+  .mainTeamSite .membercontainer #bobo1 .textContent p, .mainTeamSite .membercontainer #bobo3 .textContent p {
+    font-size: 1rem;
+  }
+  .mainTeamSite .membercontainer #bobo2, .mainTeamSite .membercontainer #bobo4 {
+    background-position-x: 95%;
+  }
+  .mainTeamSite .membercontainer #bobo2 .textContent h2, .mainTeamSite .membercontainer #bobo4 .textContent h2 {
+    font-size: 1.7rem;
+  }
+  .mainTeamSite .membercontainer #bobo2 .textContent p, .mainTeamSite .membercontainer #bobo4 .textContent p {
+    font-size: 1rem;
   }
 }
 
@@ -1165,6 +1282,13 @@ footer h4 {
   }
   .projects .projectGrid {
     display: none;
+  }
+  .mainTeamSite .teamHeader .projectText h2 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .mainTeamSite .teamHeader .projectText p {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

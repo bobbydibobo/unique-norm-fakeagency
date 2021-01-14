@@ -56,6 +56,7 @@ MIXINS
 
 html { scroll-behavior: smooth; }
 
+
 //Header
 header{
 
@@ -948,18 +949,111 @@ footer{
         }
     }  
     .membercontainer{
-        height: 60vh;
+        height: 300vh;
         width: 100vw;
-        margin-top: 10%;
-        box-shadow: 0 0 10px $specialText;
+        margin-top: 5%;
+
+        #bobo1{
+            background-image: url('../img/Bobo1.jpg');
+            display: flex;
+            flex-direction: (row-reverse);
+            padding-right: 5%;
+            padding-top: 5%;
+            
+            .textContent{
+                width: 30%;
+                h2{
+                    font-size: 4rem;
+                    color: $backgroundDark;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    color: whitesmoke;
+                }
+            }
+        }
+
+        #bobo2{
+            background-image: url('../img/Bobo2.jpg');
+            display: flex;
+            flex-direction: (row);
+            padding-left: 5%;
+            padding-top: 5%;
+            .textContent{
+                width: 30%;
+                h2{
+                    font-size: 4rem;
+                    color: $backgroundDark;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    color: whitesmoke;
+                }
+            }
+        }
+
+        #bobo3{
+            background-image: url('../img/Bobo3.jpg');
+            display: flex;
+            flex-direction: (row-reverse);
+            padding-right: 5%;
+            padding-top: 5%;
+            .textContent{
+                width: 30%;
+                h2{
+                    font-size: 4rem;
+                    color: $backgroundDark;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    color: whitesmoke;
+                }
+            }
+        }
+
+        #bobo4{
+            background-image: url('../img/Bobo4.jpg');
+            display: flex;
+            flex-direction: (row);
+            padding-left: 5%;
+            padding-top: 5%;
+            .textContent{
+                width: 30%;
+                h2{
+                    font-size: 4rem;
+                    color: $backgroundDark;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    color: whitesmoke;
+                }
+            }
+        }
+        
         .teamMember{
-            height: 100%;
+            height:17.5%;
             background-color: $specialText;
-            background-image: url('../img/randomWoman.webp');
             background-size: cover;
+            background-repeat: no-repeat;
             background-position-x:50% ;
             background-blend-mode: multiply;
             box-shadow: 0 0 10 $specialText;
+            position: relative;
+            left: 0%;
+            box-shadow: 0 0 10px $specialText;
+            margin-bottom: 10%;
 
             h2{
                 padding: 2% 2%;
@@ -1022,6 +1116,36 @@ footer{
     
             #p3img{
                 background-size: cover;
+            }
+        }
+    }
+
+    .mainTeamSite{
+        .membercontainer{
+            #bobo1, #bobo3{
+                background-position-x: 5%;
+
+                .textContent{
+                    h2{
+                        font-size: 1.7rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            #bobo2, #bobo4{
+                background-position-x: 95%; 
+
+                .textContent{
+                    h2{
+                        font-size: 1.7rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
             }
         }
     }
@@ -1194,4 +1318,18 @@ footer{
         }
     }
     
+    .mainTeamSite{
+        .teamHeader{
+            .projectText{
+                h2{
+                    text-align: center;
+                    font-size: 1.7rem; 
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+    }
 }
